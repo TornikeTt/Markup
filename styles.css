@@ -1,0 +1,779 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 12px;
+    list-style-type: none;
+}
+
+@font-face {
+    src: url(fonts/bpg_web_001_caps.ttf);
+    font-family: bpg_web_001;
+}
+@font-face {
+    src: url(fonts/bpg_web_glaho_caps.ttf);
+    font-family: bpg_web_glaho;
+}
+@font-face {
+    src: url(fonts/Sylfaen.ttf);
+    font-family: Sylfaen;
+}
+
+body{
+    background-color: #E5E5E5;
+}
+
+/* პირველი დონის ჰედერი */
+
+.first_header_box {
+    width:100%;
+    height: 40px;
+    background-color: #F4F4F4;
+    display:flex;
+    justify-content: center;
+    font-family: bpg_web_glaho; 
+}
+
+.first_header_box p, 
+address {
+    font-weight: 400;
+    margin-top: 5px;
+    font-style: normal;
+}
+
+.first_header {
+    width:65%;
+    height: 40px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.change_language p {
+    display: inline;
+    cursor: pointer;
+}
+
+.first_Header_Information {
+    width: 400px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.mobile, 
+.search, 
+.user{
+    display: flex;
+    cursor: pointer;
+}
+
+.first_Header_Information svg {
+    color: #00B15D;
+    width:20px;
+    height: 20px;
+    margin-right: 3px
+}
+
+.search {
+    margin-left: 20px;
+}
+.search > input {
+    width: 120px;
+    height: 20px;
+    background-color: #F4F4F4;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    padding-top: 4px;
+    margin-left: 3px;
+}
+
+.search > input:focus {
+    outline: 2px solid #00B15D;
+    outline-offset: 2px;
+}
+
+.search > input:placeholder-shown {
+    font-family: bpg_web_glaho; 
+    font-weight: 400;
+}
+
+.search > input::placeholder {
+    color: black;
+}
+
+
+
+/* მეორე დონის ჰეადერი */
+
+.second_header_box {
+    width: 100%;
+    height: 73px;
+    background-color: #00B15D;
+    font-family: bpg_web_001;
+}
+
+.second_header {
+    width:65%;
+    height: 73px;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.logo {
+    width: 178px;
+    height: 131px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F4F4F4;
+    position: absolute;
+    left: -185px;
+    top: 0px;
+    cursor: pointer;
+}
+
+.bird {
+    width: 254px;
+    height: 68px;
+}
+
+.logo_name {
+    width: 130px;
+    height: 30px;
+}
+
+.Services {
+    width: 83%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Booked, 
+.size, 
+.location, 
+.booklet,
+.call, 
+.shopping_bag{
+    display: flex;
+    align-items: center;
+}
+
+.Services svg , 
+.shopping_bag > svg{
+    width: 23px;
+    height: 27px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.Services p , 
+.shopping_bag p{
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+
+/* მენიუ */
+
+nav {
+    width: 65%;
+    height: 60px;
+    margin:auto;
+    font-family: bpg_web_001;
+}
+nav ul {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li {
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/*main ტაგი მოიცავს: სლაიდერს, სამზარეულოს კატალოგის, 
+    4 ნაბიჯი თქვენი ოცნების სამზარეულოს შესაკვეთათ, სარეკლამო ბანერს */
+
+main {
+    width:100%;
+    height: 100%;
+}
+
+.slide {
+    width: 100%;
+    height: 630px;
+    background-image: url(photos/Slide_kitchen_photo.png);
+    background-size: cover;
+    transform: scaleX(-1); 
+    position: relative;
+}
+
+.slide_border {
+    position: absolute;
+    transform: scaleX(-1);
+    top: 150px;
+    left: 560px;
+}
+
+.upper_slide_border {
+    width: 460px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.lower_slide_border {
+    width: 400px;
+    height: 250px;
+    background-color: #00B15D;
+    position: absolute;
+    z-index: -10;
+    top: 100px;
+    left: -50px;
+    opacity: 0.7;
+}
+
+.upper_slide_border h1 {
+    font-family: bpg_web_001;
+    font-weight: 40;
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.meeting_button , 
+.Catalog_button{
+    width: 200px;
+    height: 40px;
+    font-family: Sylfaen;
+    transition-property: all;
+    transition-duration: 0.2s;
+    font-size: 15px;
+}
+
+.meeting_button{
+    background-color: #00B15D;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-right: 10px;
+    color: white;
+}
+
+.Catalog_button{
+    border:1px solid #00B15D;
+    outline: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* click effect */
+.Catalog_button:active ,
+.meeting_button:active { 
+    transform: scale(0.90); 
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+} 
+
+/*slide_change_effect: მიუთითებს ოთხ ხაზზე რომელიც განთავსებულია სლაიდერის ქვევით */
+
+.slide_change_effect {
+    width: 150px;
+    height: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin: 20px auto;
+}
+.first_slide{
+    width: 32px;
+    background-color: #00B15D;
+    height: 10px;
+}
+.other_slides{
+    width: 32px;
+    height: 2px;
+    background-color: rgba(0, 177, 93, 0.5);
+}
+
+
+
+
+/* სამზარეულოს კატალოგი, რომელიც დაყოფილია 3 სამზარეულოს სტილის მიხედვით */
+
+.kitchen_catalog {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.text_for_kitchen_catalog {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text_for_kitchen_catalog > h1 {
+    font-size: 35px;
+    font-family: bpg_web_001;
+}
+
+.text_for_kitchen_catalog > span {
+    width: 76px;
+    height: 5px;
+    background-color: #00B15D;
+    border-radius: 20%;
+}
+.text_for_kitchen_catalog > p {
+    width: 658px;
+    font-size: 18px;
+    text-align: center;
+    font-family: Sylfaen;
+    color: #737373
+}
+
+.catalogs {
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+}
+
+.catalogs h2{
+    margin-top: 20px;
+    font-family: bpg_web_001;
+    font-size: 20px;
+}
+
+.catalogs p{
+    margin-top: 10px;
+    width: 300px;
+    font-family: Sylfaen;
+    font-size: 14px;
+    color: #737373;
+}
+
+
+.modern_img{
+    width: 350px;
+    height: 410px;
+    background-image: url(photos/modern.png);
+    background-size: cover;
+}
+
+.neoclassicism_img{
+    width: 350px;
+    height: 410px;
+    background-size: cover;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(photos/neoclassicism.png);
+    position: relative;
+    cursor: pointer;
+}
+
+.neoclassicism_img:hover{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(photos/neoclassicism.png);
+}
+
+.neoclassicism_border {
+    position: absolute;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #00B15D;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.neoclassicism_border > button{
+    position: absolute;
+    width: 240px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00B15D;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+}
+
+.classicm_img{
+    width: 350px;
+    height: 410px;
+    background-image: url(photos/classic.png);
+    background-size: cover;
+}
+
+
+
+
+/*4 ნაბიჯი თქვენი ოცნების სამზარეულოს შესაკვეთად */
+
+.four_step_section {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.four_step_text {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.four_step_text > h1 {
+    font-size: 32px;
+    font-family: bpg_web_001;
+}
+
+.four_step_text > span {
+    width: 76px;
+    height: 5px;
+    background-color: #00B15D;
+    border-radius: 20%;
+}
+
+.four_step_text > p {
+    width: 658px;
+    font-size: 18px;
+    text-align: center;
+    font-family: Sylfaen;
+    color: #737373
+}
+
+.four_steps {
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+}
+
+.four_steps h2{
+    font-family: bpg_web_001;
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: right;
+}
+
+.four_steps p{
+    font-family: Sylfaen;
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: right;
+    color: #737373;
+    width: 250px;
+}
+
+.first_step_image{
+    width: 250px;
+    height: 400px;
+    background-image: url(photos/firstStep.png);
+    background-size: cover;
+    background-position: -60px ;
+    border-radius: 5%;
+}
+
+.second_step_image{
+    width: 250px;
+    height: 400px;
+    background-image: url(photos/SecondStep.png);
+    background-size: cover;
+    background-position: 410px;
+    border-radius: 5%;
+}
+
+.third_step_image{
+    width: 250px;
+    height: 400px;
+    background-image: url(photos/thirdStep.png);
+    background-size: cover;
+    background-position: -80px;
+    border-radius: 5%;
+}
+
+.fourth_step_image{
+    width: 250px;
+    height: 400px;
+    background-image: url(photos/fourthStep.jpg);
+    background-size: cover;
+    background-position: -180px;
+    border-radius: 5%;
+}
+
+
+.first_step, 
+.second_step, 
+.third_step,
+.fourth_step{
+    position: relative;
+}
+
+.first_step_image_background-effect , 
+.second_step_image_background-effect , 
+.fourth_step_image_background-effect{
+    position: absolute;
+    width: 250px;
+    height: 400px;
+    background-color: #00B15D;
+    top: -40px;
+    left: 25px;
+    z-index: -1;
+    border-radius: 5%;
+}
+
+.third_step_image_background-effect{
+    position: absolute;
+    width: 250px;
+    height: 400px;
+    background-color: black;
+    top: -40px;
+    left: 25px;
+    z-index: -1;
+    border-radius: 5%;
+}
+
+.first_step_number , 
+.second_step_number,
+.fourth_step_number{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+}
+
+.third_step_number{
+    width: 50px;
+    height: 50px;
+    background-color: #00B15D;
+    color: white;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+}
+
+
+
+
+
+/* სარეკლამო ბანერი */
+
+.banner{
+    width: 100%;
+    height: 350px;
+    background-image: url(photos/bannerImage.png);
+    background-size: cover;
+    overflow: hidden;
+    background-position: 450px ;
+    margin-top: 100px;
+}
+/* insideBanner_effect განსაზღვრაბს სარეკლამო ბანერის მარცხნივ არსებულ სტილს */
+.insideBanner_effect{
+    width:50%;
+    height: 100%;
+    background-color: #00B15D;
+    transform: skew(-20deg);
+    margin-left: -75px;
+}
+
+.inside_effect{
+    width: 100%;
+    height: 100%;
+    transform: skew(20deg);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding-left: 100px;
+}
+
+.insideBanner_effect_text{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.insideBanner_effect_text > h1 {
+    font-size: 22px;
+    font-family: bpg_web_001;
+}
+
+.insideBanner_effect_text > span {
+    width: 76px;
+    height: 5px;
+    background-color: white;
+    border-radius: 20%;
+}
+
+.inside_effect > button{
+    width: 250px;
+    height: 60px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition-property: all;
+    transition-duration: 0.2s
+}
+
+.inside_effect > button:active{
+    transform: scale(0.90); 
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+
+
+
+/* ფუტერი */
+
+footer{
+    width: 100%;
+    height: 540px;
+    margin-top: 50px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),url(photos/footer.png);
+    background-size: cover;
+    background-position: 0px -130px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+
+.footer_left_side{
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sign_email > p{
+    font-size: 18px;
+    font-family: bpg_web_glaho;
+}
+
+.for_footer_email > input{
+    margin-top: 5px;
+    width: 270px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    position: relative;
+}
+
+.for_footer_email > input:placeholder-shown{
+    font-family: Sylfaen;
+}
+.for_footer_email {
+    position: relative;
+}
+.for_footer_email img{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%)
+}
+
+.social_media p{
+    font-size: 18px;
+    font-family: bpg_web_glaho;
+}
+
+.social_media_icons{
+    margin-top: 5px;
+}
+
+
+.footer_left_side > button{
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+    background-color: #00B15D;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.2s
+}
+
+
+.footer_left_side > button:active{
+    transform: scale(0.90); 
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.footer_left_side > p{
+    font-size: 16px;
+}
+
+
+.footer_middle_side,  
+.footer_right_side {
+    height: 75%;
+}
+
+.footer_middle_side p,
+.footer_right_side p {
+    font-size: 18px;
+    font-family: bpg_web_glaho;
+    margin-top: 15px;
+}
+
+
+.footer_middle_side ul , 
+.footer_right_side ul{
+    margin-top: 30px;
+}
+
+.footer_middle_side li , 
+.footer_right_side li{
+    margin-top: 15px;
+    font-size: 17px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Sylfaen;
+}
+
+.footer_middle_side li:hover , 
+.footer_right_side li:hover {
+    text-decoration: underline ;
+}
